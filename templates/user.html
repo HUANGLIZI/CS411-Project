@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title></title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
+  <link rel="stylesheet" href="custom.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">-->
+<!--  <a id="logo" href="" class="nav-link font-weight-bold text-uppercase">cs411 team032</a>-->
+<!--  <div id="navbarContent" class="collapse navbar-collapse order-sm-12 order-lg-1">-->
+<!--    <ul class="nav navbar-nav ml-auto">-->
+
+<!--      <li id="user_navi" class="nav-item"><a class="nav-link font-weight-bold text-uppercase">User</a></li>-->
+<!--      <li id="house_navi" class="nav-item"><a class="nav-link font-weight-bold text-uppercase">House</a></li>-->
+<!--      <li id="city_navi" class="nav-item"><a class="nav-link font-weight-bold text-uppercase">City</a></li>-->
+<!--      <li id="add" class="nav-item" data-bs-toggle="modal" data-bs-target="#add_modal"><a class="nav-link font-weight-bold text-uppercase">add</a></li>-->
+<!--      <li id="search" class="nav-item" data-bs-toggle="modal" data-bs-target="#search_modal"><a class="nav-link font-weight-bold text-uppercase">search</a></li>-->
+
+<!--    </ul>-->
+
+<!--  </div>-->
+<!--    <ul class="nav navbar-nav" style="float: right">-->
+<!--        <li id="ad_search" class="nav-item" data-bs-toggle="modal" data-bs-target="#advance_search_modal"><a class="nav-link font-weight-bold text-uppercase">advance</a></li>-->
+
+<!--    </ul>-->
+<!--</nav>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">
+    <a class="navbar-brand" href="#">User</a>
+    <ul  class="navbar-nav mr-auto">
+<!--        <li id="user_navi" class="nav-item">-->
+<!--            <a class="nav-link">User</a>-->
+<!--        </li>-->
+
+    </ul>
+    <ul class="navbar-nav ml-auto">
+<!--        <li id="add" class="nav-item" data-bs-toggle="modal" data-bs-target="#add_modal">-->
+<!--            <a class="nav-link">Add</a>-->
+<!--        </li>-->
+        <li id="house_navi" class="nav-item">
+            <a class="nav-link">Houses</a>
+        </li>
+        <li id="search" class="nav-item" data-bs-toggle="modal" data-bs-target="#search_modal">
+            <a class="nav-link">Search</a>
+        </li>
+         <li id="exit" class="nav-item">
+            <a class="nav-link">Exit</a>
+        </li>
+<!--        <li id="ad_search" data-bs-toggle="modal" data-bs-target="#advance_search_modal">
+            <a class="nav-link">Advance</a>
+        </li>-->
+<!--        <li class="dropdown show">-->
+<!--          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--            Advance Search-->
+<!--          </a>-->
+
+<!--          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
+<!--            <a class="dropdown-item" id="ad_search" data-bs-toggle="modal" data-bs-target="#advance_search_modal">Advance1</a>-->
+<!--            <a class="dropdown-item" id="procedure" data-bs-toggle="modal" data-bs-target="#procedure_modal">Advance2</a>-->
+<!--          </div>-->
+<!--        </li>-->
+    </ul>
+</nav>
+<!--<ul>-->
+<!--    <li id="user_navi"><a href="#home">User</a></li>-->
+<!--    <li id="house_navi"><a href="#news">House</a></li>-->
+<!--    <li id="add" ><a data-bs-toggle="modal" data-bs-target="#add_modal">Add</a></li>-->
+<!--    <li id="search" data-bs-toggle="modal" data-bs-target="#search_modal"><a>Search</a></li>-->
+<!--    <li id="ad_search" data-bs-toggle="modal" data-bs-target="#advance_search_modal"><a>Advance</a></li>-->
+<!--    <li style="float:right"><a href="#about">About</a></li>-->
+<!--</ul>-->
+
+<main role="main" class="container extra-bottom">
+<!--  <h1 class="mt-5"></h1>-->
+  <p><mark></mark></p>
+</main>
+
+<div class="container" >
+
+  <!-- Button trigger modal -->
+  <div style="text-align: right;">
+<!--    <button id="11" type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#user_edit_modal" data-source="New Task">Add Task</button>-->
+  </div>
+  <div id="house_edit_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div id="house_edit_modal_body" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="house_edit_modal_save_change" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="user_edit_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div id="user_edit_modal_body" class="modal-body">
+<!--          <div class="input-group mb-3">-->
+<!--            <span class="input-group-text" id="task-form-display">Task</span>-->
+<!--            <input type="text" class="form-control" value="Description of task" aria-label="task-name" aria-describedby="basic-addon1">-->
+<!--          </div>-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="update_user_modal_save_change" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="add_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Choose table</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+<!--              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_user_modal">User</button>
+                <button type="button" class="btn btn-primary">House</button>
+                <button type="button" class="btn btn-primary">Host</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="add_user_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div id="add_user_modal_body" class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">name</span>
+                        <input type="text" class="form-control name" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">gender</span>
+                        <input type="text" class="form-control gender" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">phone</span>
+                        <input type="text" class="form-control phone" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">email</span>
+                        <input type="text" class="form-control email" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="add_user_modal_save_change" type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="search_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div id="search_modal_body" class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">beds num</span>
+                        <input type="text" id="bbbb" class="form-control beds" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">min price</span>
+                        <input type="text" id="mmmm" class="form-control minp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">max price</span>
+                        <input type="text" id="mmmmm" class="form-control maxp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="search_house_button" type="button" class="btn btn-primary">Search</button>
+<!--                    <button id="search_modal_save_change2" type="button" class="btn btn-primary">Search 2</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="procedure_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Advance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div id="procedure_modal_body" class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">beds num</span>
+                        <input type="text" class="form-control beds" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">min price</span>
+                        <input type="text" class="form-control minp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">max price</span>
+                        <input type="text" class="form-control maxp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">host id</span>
+                        <input type="text" class="form-control hostid" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">added_value</span>
+                        <input type="text" class="form-control valuedif" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="create_procedure" type="button" class="btn btn-primary">Create procedure</button>
+                    <button id="query_procedure" type="button" class="btn btn-primary">Query procedure</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="advance_search_modal" class="modal fade"  tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Advance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div id="advance_search_modal_body" class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">beds num</span>
+                        <input type="text" class="form-control beds" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">min price</span>
+                        <input type="text" class="form-control minp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text ">max price</span>
+                        <input type="text" class="form-control maxp" value="" aria-label="task-name" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="advance_search_modal_save_change1" type="button" class="btn btn-primary">Search 1</button>
+                    <button id="advance_search_modal_save_change2" type="button" class="btn btn-primary">Search 2</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container table-responsive" style="padding: 30px;alignment: center">
+  <table class="table">
+    <thead>
+      <tr id="table_head">
+<!--        <th class="task-id">#</th>-->
+<!--        <th class="task">Task Name</th>-->
+<!--        <th class="status">Status</th>-->
+<!--        <th class="update">Edit</th>-->
+<!--        <th class="update">Remove</th>-->
+      </tr>
+    </thead>
+
+    <tbody id="tbody">
+
+    <tr >
+<!--      <td>1</td>-->
+<!--      <td>sss</td>-->
+<!--      <td>sss</td>-->
+<!--      <td><button type="button" data-bs-toggle="modal" data-bs-target="#user_edit_modal"><i class="fa fa-pen fa-1"></i></button></td>-->
+<!--      <td><button type="button" ><i class="fa fa-trash fa-1"></i></button></td>-->
+    </tr>
+
+    </tbody>
+
+  </table>
+<!--  <button id="add" class="btn btn-outline-info btn-sm" >add</button>-->
+<!--  <div id="as">slsjcncnm</div>-->
+    <ul id="pages" class="pagination" style="width:100%; visibility: hidden; display: flex; justify-content: center;">
+          <li><a href="#">«</a></li>
+          <li><a class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">»</a></li>
+        </ul>
+</div>
+
+
+</body>
+
+
+<script>
+    var global_which_page = "user"
+</script>
+<script src="user.js"></script>
+<script src="advance.js"></script>
+<script src="procedure.js"></script>
+<script src="house_user.js"></script>
+<script src="advance.js"></script>
+<script src="search.js"></script>
+
+
+</html>
